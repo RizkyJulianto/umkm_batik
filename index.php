@@ -127,7 +127,107 @@
     </div>
     <!-- Tentang Section End -->
 
-
+    <!-- Produk Section -->
+    <div class="produk mt-12 px-25 relative">
+        <div class="card flex justify-center mt-70 items-center gap-x-3 text-lg text-white bg-primary py-3 px-6 w-[240px] rounded-[30px] mx-auto">
+            <span>Produk Kami</span>
+        </div>
+        <form class="max-w-md mt-18 ml-auto mr-5">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Cari Produk" required />
+                <!-- <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> -->
+            </div>
+        </form>
+        <div class="flex justify-center mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+                <div onclick="showDetail(this)" class="relative p-4 max-w-sm cursor-pointer bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-auto">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />    
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                    <!-- <div class="product-detail hidden">
+                        <h2 class="text-xl font-bold text-gray-900">Detail Produk</h2>
+                        <ul class="mt-4 text-gray-700 text-sm space-y-2">
+                            <li><strong>Stok:</strong> 10 pcs</li>
+                            <li><strong>Ukuran:</strong> L, XL</li>
+                            <li><strong>Pengiriman:</strong> 1-2 hari kerja</li>
+                        </ul>
+                        <button onclick="hideDetail(this); event.stopPropagation();" class="mt-6 text-white bg-secondary hover:bg-gray-700 px-4 py-2 rounded-lg text-sm">Kembali</button>
+                    </div> -->
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>  
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                </div>
+                <div class="p-4 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 w-[300px] h-[501px]">
+                    <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
+                    <div class="text-left">
+                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                        <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
+                        <p class="mt-2 text-gray-500">Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!-- Gradient -->
+        <div class="bg-primary w-[500px] h-[350px] absolute left-1/2 -translate-x-1/2 top-150 -z-10 blur-[350px] rounded-xl"></div>
+        <div class="bg-primary w-[500px] h-[350px] absolute right-35 -z-10 blur-[210px] top-120 rounded-xl"></div>
+        <div class="bg-primary w-[500px] h-[350px] absolute left-35 -z-10 blur-[210px] top-120 rounded-xl"></div>
+    </div>
+    <!-- Produk Section End -->
+     
     <!-- Footer -->
     <footer class="footer mt-96 px-8 w-full">
         <div class="footer-container bg-white shadow-md border border-gray-100 rounded-[10px] p-8 w-full  flex justify-between">
@@ -190,6 +290,28 @@
     <!-- Footer End -->
 
     <script src="libs/flowbite/flowbite.min.js"></script>
+    <!-- <script>
+        function showDetail(card) {
+            const content = card.querySelector("div.text-left");
+            const detail = card.querySelector("div.product-detail");
+
+        // Sembunyikan konten utama
+            if (content && detail) {
+                content.style.display = "none";
+                detail.classList.remove("hidden");
+            }
+        }
+        function hideDetail(button) {
+            const detail = button.closest("div.product-detail");
+            const card = detail.closest("div.relative"); // Mengarah ke card
+            const content = card.querySelector("div.text-left");
+
+            if (detail && content) {
+                detail.classList.add("hidden");
+                content.style.display = "block";
+            }
+        }
+    </script> -->
 </body>
 
 </html>
