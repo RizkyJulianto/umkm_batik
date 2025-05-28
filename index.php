@@ -19,7 +19,7 @@
 
 <body class="font-fira h-[5000px]">
     <!-- Header Section -->
-    <header class="header">
+    <header class="header" id="beranda">
         <nav class="bg-transparant py-5 px-8">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -28,10 +28,10 @@
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  ">
                         <li>
-                            <a href="#" class="block py-2  text-black/70 hover:text-primary transition-all duration-300" aria-current="page">Beranda</a>
+                            <a href="#beranda" class="block py-2  text-black/70 hover:text-primary transition-all duration-300" aria-current="page">Beranda</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2  text-black/70 hover:text-primary transition-all duration-300 ">Tentang</a>
+                            <a href="#tentang" class="block py-2  text-black/70 hover:text-primary transition-all duration-300 ">Tentang</a>
                         </li>
                         <li>
                             <a href="#" class="block py-2  text-black/70 hover:text-primary transition-all duration-300 ">Produk</a>
@@ -49,7 +49,7 @@
     <!-- Header Section End -->
 
     <!-- Beranda Section -->
-    <div class="beranda  h-screen">
+    <div class="beranda h-screen" >
         <!-- Backround -->
         <img src="assets/images/beranda-bg.png" alt="" class="absolute -z-10 top-0 w-full h-screen">
         <div class="background-overlay bg-white/80 w-full h-screen absolute top-0 -z-9 "></div>
@@ -79,7 +79,7 @@
 
 
     <!-- Tentang Section -->
-    <div class="tentang mt-12 px-30 relative">
+    <div class="tentang mt-12 px-30 relative scroll-mt-28" id="tentang">
         <div class="tentang-container-content w-full flex justify-between">
             <div class="tentang-left-col max-w-[500px]">
                 <div class="judul">
@@ -149,10 +149,10 @@
             <div class="foooter-col max-w-90 h-full flex flex-col pt-2 items-center">
                 <div class="link-cepat border-t border-gray-200">
                     <ul class="flex gap-x-4 text-lg  text-secondary pt-2">
-                        <li><a href="">Beranda</i></a></li>
-                        <li><a href="">Tentang</i></a></li>
-                        <li><a href="">Produk</i></a></li>
-                        <li><a href="">Testimoni</i></a></li>
+                        <li><a href="#beranda" class="hover:text-primary transition-all duration-500 ">Beranda</i></a></li>
+                        <li><a href="#tentang" class="hover:text-primary transition-all duration-500 ">Tentang</i></a></li>
+                        <li><a href="" class="hover:text-primary transition-all duration-500 ">Produk</i></a></li>
+                        <li><a href="" class="hover:text-primary transition-all duration-500 ">Testimoni</i></a></li>
                     </ul>
                 </div>
                 <div class="tagline mt-8">
