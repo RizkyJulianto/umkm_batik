@@ -37,7 +37,7 @@
                             <a href="#produk" class="block py-5 lg:py-0 lg:px-2 px-5  lg:text-base  border-b border-gray-100 lg:border-0 min-[420px]:text-white md:text-white lg:text-black/70  hover:text-primary transition-all duration-300 max-lg:text-xl">Produk</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-5 lg:py-0 lg:px-2 px-5  lg:text-base  border-b border-gray-100 lg:border-0 min-[420px]:text-white md:text-white lg:text-black/70 hover:text-primary transition-all duration-300 max-lg:text-xl">Testimoni</a>
+                            <a href="#testimoni" class="block py-5 lg:py-0 lg:px-2 px-5  lg:text-base  border-b border-gray-100 lg:border-0 min-[420px]:text-white md:text-white lg:text-black/70 hover:text-primary transition-all duration-300 max-lg:text-xl">Testimoni</a>
                         </li>
                     </ul>
                 </div>
@@ -140,6 +140,7 @@
         <div class="card flex justify-center mt-70 items-center gap-x-3 text-lg text-white bg-primary py-3 px-6 w-[240px] rounded-[30px] mx-auto">
             <span>Produk Kami</span>
         </div>
+        <!-- Pencarian -->
         <form class="max-w-md mt-18 ml-auto mr-5">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">
@@ -148,10 +149,12 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                 </div>
-                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Cari Produk" required />
-                <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                <input type="text" id="searchInput" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary" placeholder="Cari Produk" required />
+                <button onclick="searchProduct()" class="text-white absolute end-2.5 bottom-2.5 bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-4 py-2">Search</button>
             </div>
         </form>
+        <!-- Pencarian End -->
+
         <div class="flex justify-center mt-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
                 <div class="w-[300px] h-[501px]" style=" perspective: 1000px;">
@@ -159,8 +162,8 @@
                         <!-- Depan Kartu -->
                         <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 0.5rem; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: start; justify-content: start; padding: 1.5rem;">
                             <img class=" rounded-t-lg" src="assets/images/BTPekalongan.jpg" alt="product image" />
-                            <div class="text-left">
-                                <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Tulis Solo</h2>
+                            <div class="produk-card text-left">
+                                <h2 class="text-xl font-semibold tracking-tight text-gray-900 mt-4">Batik Baca Solo</h2>
                                 <h5 class="text-lg font-semibold text-gray-900 mt-2">Rp. 250.000</h5>
                                 <p class="mt-2 text-gray-500"><?php
                                                                 $test = "Batik khas Solo dengan motif tradisional yang elegan dan cocok digunakan dalam acara resmi maupun santai.";
@@ -350,16 +353,20 @@
     <!-- Produk Section End -->
 
     <!-- Testimoni Section  -->
-    <div class="testimonial mt-12 px-25 relative">
-        <div class="card flex justify-center mt-70 items-center gap-x-3 text-lg text-white bg-primary py-3 px-6 w-[240px] rounded-[30px] mx-auto">
+    <div class="testimoni mt-32 px-30 scroll-mt-28 relative" id="testimoni">
+        <!-- Judul -->
+        <div class="flex justify-center items-center text-lg text-white bg-primary py-3 px-6 w-[240px] rounded-[30px] mx-auto">
             <span>Testimoni</span>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-            <div class="bg-white rounded-xl relative mt-12 shadow border-[1px] border-[#eee] p-6 max-w-lg w-full">
-                <!-- Avatar & Label (Floating di atas card) -->
-                <div class="flex items-center space-x-1">
+
+        <!-- Container Scroll -->
+        <div class="container-testimonials overflow-hidden mt-10">
+            <div class="row-testimonials flex gap-12 p-6 w-max" style="animation: scrollX 60s linear infinite;">
+
+                <!-- Testimonial Card 1 -->
+                <div class="flex-none w-[380px] h-[160px] p-4 border border-gray-300 shadow-sm rounded-xl bg-white relative mt-12 hover:bg-gray-100 transition-colors duration-300">
                     <!-- Avatar -->
-                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 right-5 bg-gray-300 rounded-full flex items-center justify-center">
+                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
                         <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                         </svg>
@@ -369,186 +376,235 @@
                     <div class="absolute z-10 top-0 left-4 bg-gray-100 pl-9 pr-4 py-1 rounded-br-2xl text-sm text-gray-700 font-medium shadow">
                         Anonim
                     </div>
+                    <!-- Isi -->
+                    <p class="text-gray-800 text-sm mt-6 p-3 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt justo at rhoncus convallis.
+                    </p>
                 </div>
-                <!-- Teks Testimoni -->
-                <p class="text-gray-800 text-sm mt-5 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt justo at rhoncus convallis. Maecenas non tempor sapien, sed fermentum nunc. Sed mattis, nibh vitae mollis facilisis, ex magna cursus neque, sed dapibus lorem tortor id ex.
-                </p>
-            </div>
-            <div class="bg-white rounded-xl relative mt-12 shadow border-[1px] border-[#eee] p-6 max-w-lg w-full">
-                <!-- Avatar & Label (Floating di atas card) -->
-                <div class="flex items-center space-x-1">
-                    <!-- Avatar -->
-                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 right-5 bg-gray-300 rounded-full flex items-center justify-center">
+
+                <!-- Testimonial Card 2 -->
+                <div class="flex-none w-[380px] p-4 border border-gray-300 shadow-sm rounded-xl bg-white relative mt-12 hover:bg-gray-100 transition-colors duration-300">
+                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
                         <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                         </svg>
                     </div>
-
-                    <!-- Label -->
                     <div class="absolute z-10 top-0 left-4 bg-gray-100 pl-9 pr-4 py-1 rounded-br-2xl text-sm text-gray-700 font-medium shadow">
                         Anonim
                     </div>
+                    <p class="text-gray-800 text-sm mt-6 p-3 leading-relaxed">
+                        Morbi tincidunt justo at rhoncus convallis. Maecenas non tempor sapien, sed fermentum nunc.
+                    </p>
                 </div>
-                <!-- Teks Testimoni -->
-                <p class="text-gray-800 text-sm mt-5 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt justo at rhoncus convallis. Maecenas non tempor sapien, sed fermentum nunc. Sed mattis, nibh vitae mollis facilisis, ex magna cursus neque, sed dapibus lorem tortor id ex.
-                </p>
-            </div>
-            <div class="bg-white rounded-xl relative mt-12 shadow border-[1px] border-[#eee] p-6 max-w-lg w-full">
-                <!-- Avatar & Label (Floating di atas card) -->
-                <div class="flex items-center space-x-1">
-                    <!-- Avatar -->
-                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 right-5 bg-gray-300 rounded-full flex items-center justify-center">
+
+                <!-- Testimonial Card 3 -->
+                <div class="flex-none w-[380px] p-4 border border-gray-300 shadow-sm rounded-xl bg-white relative mt-12 hover:bg-gray-100 transition-colors duration-300">
+                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
                         <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                         </svg>
                     </div>
-
-                    <!-- Label -->
                     <div class="absolute z-10 top-0 left-4 bg-gray-100 pl-9 pr-4 py-1 rounded-br-2xl text-sm text-gray-700 font-medium shadow">
                         Anonim
                     </div>
+                    <p class="text-gray-800 text-sm mt-6 p-3 leading-relaxed">
+                        Sed mattis, nibh vitae mollis facilisis, ex magna cursus neque, sed dapibus lorem tortor id ex.
+                    </p>
                 </div>
-                <!-- Teks Testimoni -->
-                <p class="text-gray-800 text-sm mt-5 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt justo at rhoncus convallis. Maecenas non tempor sapien, sed fermentum nunc. Sed mattis, nibh vitae mollis facilisis, ex magna cursus neque, sed dapibus lorem tortor id ex.
-                </p>
+
+                <!-- Testimonial Card 4 -->
+                <div class="flex-none w-[380px] p-4 border border-gray-300 shadow-sm rounded-xl bg-white relative mt-12 hover:bg-gray-100 transition-colors duration-300">
+                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <div class="absolute z-10 top-0 left-4 bg-gray-100 pl-9 pr-4 py-1 rounded-br-2xl text-sm text-gray-700 font-medium shadow">
+                        Anonim
+                    </div>
+                    <p class="text-gray-800 text-sm mt-6 p-3 leading-relaxed">
+                        Morbi tincidunt justo at rhoncus convallis. Maecenas non tempor sapien, sed fermentum nunc.
+                    </p>
+                </div>
+
+                <!-- Testimonial Card 5 -->
+                <div class="flex-none w-[380px] p-4 border border-gray-300 shadow-sm rounded-xl bg-white relative mt-12 hover:bg-gray-100 transition-colors duration-300">
+                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <div class="absolute z-10 top-0 left-4 bg-gray-100 pl-9 pr-4 py-1 rounded-br-2xl text-sm text-gray-700 font-medium shadow">
+                        Anonim
+                    </div>
+                    <p class="text-gray-800 text-sm mt-6 p-3 leading-relaxed">
+                        Sed mattis, nibh vitae mollis facilisis, ex magna cursus neque, sed dapibus lorem tortor id ex.
+                    </p>
+                </div>
+
+                <!-- Testimonial Card 6 -->
+                <div class="flex-none w-[380px] p-4 border border-gray-300 shadow-sm rounded-xl bg-white relative mt-12 hover:bg-gray-100 transition-colors duration-300">
+                    <div class="absolute -top-4 -left-4 z-20 w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <div class="absolute z-10 top-0 left-4 bg-gray-100 pl-9 pr-4 py-1 rounded-br-2xl text-sm text-gray-700 font-medium shadow">
+                        Anonim
+                    </div>
+                    <p class="text-gray-800 text-sm mt-6 p-3 leading-relaxed">
+                        Sed mattis, nibh vitae mollis facilisis, ex magna cursus neque, sed dapibus lorem tortor id ex.
+                    </p>
+                </div>
+
             </div>
         </div>
-        <!-- Testimoni Section End -->
+    </div>
 
-        <!-- Footer -->
-        <footer class="footer mt-96 lg:px-8">
-            <div class="footer-container bg-white shadow-md border border-gray-100 rounded-[10px] p-12 lg:p-8 w-full gap-y-10 flex flex-wrap justify-between">
-                <div class="foooter-col max-md:w-full md:max-w-72  ">
-                    <div class="judul">
-                        <h3 class="max-md:text-center font-bold text-3xl text-secondary">Batik <span class="text-primary">Indonesia</span></h3>
-                    </div>
-                    <div class="deskripsi mt-2 text-secondary font-light max-md:text-center ">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, atque!</p>
-                    </div>
-                    <div class="sosial-media mt-12">
-                        <ul class="flex gap-x-3 max-md:justify-center ">
-                            <li class="bg-primary rounded-full w-13  h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-x-twitter text-3xl text-white"></i></a></li>
-                            <li class="bg-primary rounded-full w-13  h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-instagram text-3xl text-white"></i></a></li>
-                            <li class="bg-primary rounded-full w-13 h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-facebook text-3xl text-white"></i></a></li>
-                        </ul>
-                    </div>
+    <!-- CSS Inline -->
+    <style>
+        @keyframes scrollX {
+            from {
+                transform: translateX(0%);
+            }
+
+            to {
+                transform: translateX(calc(-50% - 3rem));
+            }
+        }
+
+        .container-testimonials:hover .row-testimonials {
+            animation-play-state: paused;
+        }
+    </style>
+
+
+    <!-- Testimoni Section End -->
+
+    <!-- Footer -->
+    <footer class="footer mt-96 lg:px-8">
+        <div class="footer-container bg-white shadow-md border border-gray-100 rounded-[10px] p-12 lg:p-8 w-full gap-y-10 flex flex-wrap justify-between">
+            <div class="foooter-col max-md:w-full md:max-w-72  ">
+                <div class="judul">
+                    <h3 class="max-md:text-center font-bold text-3xl text-secondary">Batik <span class="text-primary">Indonesia</span></h3>
                 </div>
-                <div class="foooter-col max-w-90 h-full flex flex-col pt-2 items-center max-md:order-3">
-                    <div class="link-cepat border-t border-gray-200">
-                        <ul class="flex gap-x-4 text-lg  text-secondary pt-2">
-                            <li><a href="#beranda" class="hover:text-primary transition-all duration-500 ">Beranda</i></a></li>
-                            <li><a href="#tentang" class="hover:text-primary transition-all duration-500 ">Tentang</i></a></li>
-                            <li><a href="" class="hover:text-primary transition-all duration-500 ">Produk</i></a></li>
-                            <li><a href="" class="hover:text-primary transition-all duration-500 ">Testimoni</i></a></li>
-                        </ul>
-                    </div>
-                    <div class="tagline mt-8">
-                        <h6 class="font-bold text-xl text-center text-secondary italic">" Batik <span class="text-primary">Indonesia</span> Membentuk Pola <br>
-                            Melestarikan <span class="text-primary">Budaya "</span></h6>
-                    </div>
-                    <div class="copyright text-center mt-8 text-secondary">
-                        <p>&copy; 2025 Batik Indonesia. All rights reserved.</p>
-                    </div>
+                <div class="deskripsi mt-2 text-secondary font-light max-md:text-center ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, atque!</p>
                 </div>
-                <div class="foooter-col  w-full lg:w-auto pt-5 lg:pt-2 max-md:order-2 max-lg:border-t border-gray-200">
-                    <div class="judul">
-                        <h3 class="text-secondary font-bold text-2xl">Galeri Kami</h3>
-                    </div>
-                    <div class="footer-col-content flex lg:flex-col max-md:flex-col  h-full justify-between ">
-                        <div class="galeri flex gap-x-3 mt-3">
-                            <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
-                            <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
-                            <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
-                        </div>
-                        <div class="kerjasama">
-                            <form action="" class=" mb-7 w-full">
-                                <div class="judul">
-                                    <h4 class="font-bold text-xl lg:text-base text-secondary mb-2">Ingin Bekerja Sama?</h4>
-                                </div>
-                                <div class="form-group w-full flex gap-x-2">
-                                    <input type="text" name="email" id="email" placeholder="Masukan Email Anda..." class="text-sm rounded-[5px] ring-0 border border-gray-200  w-full lg:w-auto ">
-                                    <button type="submit" class="bg-primary text-white font-bold rounded-[5px] py-2 px-5 cursor-pointer hover:bg-amber-500 duration-500 transition-all">Kirim</button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-
+                <div class="sosial-media mt-12">
+                    <ul class="flex gap-x-3 max-md:justify-center ">
+                        <li class="bg-primary rounded-full w-13  h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-x-twitter text-3xl text-white"></i></a></li>
+                        <li class="bg-primary rounded-full w-13  h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-instagram text-3xl text-white"></i></a></li>
+                        <li class="bg-primary rounded-full w-13 h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-facebook text-3xl text-white"></i></a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-        <!-- Footer End -->
+            <div class="foooter-col max-w-90 h-full flex flex-col pt-2 items-center max-md:order-3">
+                <div class="link-cepat border-t border-gray-200">
+                    <ul class="flex gap-x-4 text-lg  text-secondary pt-2">
+                        <li><a href="#beranda" class="hover:text-primary transition-all duration-500 ">Beranda</i></a></li>
+                        <li><a href="#tentang" class="hover:text-primary transition-all duration-500 ">Tentang</i></a></li>
+                        <li><a href="#produk" class="hover:text-primary transition-all duration-500 ">Produk</i></a></li>
+                        <li><a href="#testimoni" class="hover:text-primary transition-all duration-500 ">Testimoni</i></a></li>
+                    </ul>
+                </div>
+                <div class="tagline mt-8">
+                    <h6 class="font-bold text-xl text-center text-secondary italic">" Batik <span class="text-primary">Indonesia</span> Membentuk Pola <br>
+                        Melestarikan <span class="text-primary">Budaya "</span></h6>
+                </div>
+                <div class="copyright text-center mt-8 text-secondary">
+                    <p>&copy; 2025 Batik Indonesia. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="foooter-col  w-full lg:w-auto pt-5 lg:pt-2 max-md:order-2 max-lg:border-t border-gray-200">
+                <div class="judul">
+                    <h3 class="text-secondary font-bold text-2xl">Galeri Kami</h3>
+                </div>
+                <div class="footer-col-content flex lg:flex-col max-md:flex-col  h-full justify-between ">
+                    <div class="galeri flex gap-x-3 mt-3">
+                        <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
+                        <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
+                        <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
+                    </div>
+                    <div class="kerjasama">
+                        <form action="" class=" mb-7 w-full">
+                            <div class="judul">
+                                <h4 class="font-bold text-xl lg:text-base text-secondary mb-2">Ingin Bekerja Sama?</h4>
+                            </div>
+                            <div class="form-group w-full flex gap-x-2">
+                                <input type="text" name="email" id="email" placeholder="Masukan Email Anda..." class="text-sm rounded-[5px] ring-0 border border-gray-200  w-full lg:w-auto ">
+                                <button type="submit" class="bg-primary text-white font-bold rounded-[5px] py-2 px-5 cursor-pointer hover:bg-amber-500 duration-500 transition-all">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
 
-        <script src="libs/flowbite/flowbite.min.js"></script>
-        <script>
-            // function showDetail(card) {
-            //     const content = card.querySelector("div.text-left");
-            //     const detail = card.querySelector("div.product-detail");
+    <script src="libs/flowbite/flowbite.min.js"></script>
+    <script>
+        // function searchProduct() {
+        //     const input = document.getElementById("searchInput").value.toLowerCase();
+        //     const productCards = document.querySelectorAll(".produk-card");
 
-            // // Sembunyikan konten utama
-            //     if (content && detail) {
-            //         content.style.display = "none";
-            //         detail.classList.remove("hidden");
-            //     }
-            // }
-            // function hideDetail(button) {
-            //     const detail = button.closest("div.product-detail");
-            //     const card = detail.closest("div.relative"); // Mengarah ke card
-            //     const content = card.querySelector("div.text-left");
+        //     productCards.forEach(card => {
+        //         const productName = card.querySelector("h3").textContent.toLowerCase();
+        //         if (productName.includes(input)) {
+        //             card.classList.remove("hidden");
+        //         } else {
+        //             card.classList.add("hidden");
+        //         }
+        //     });
+        // }
 
-            //     if (detail && content) {
-            //         detail.classList.add("hidden");
-            //         content.style.display = "block";
-            //     }
-            // }
+        window.addEventListener('scroll', function() {
+            const scrollY = window.pageYOffset;
+            const navbar = document.getElementById('navbar');
 
-            window.addEventListener('scroll', function() {
-                const scrollY = window.pageYOffset;
-                const navbar = document.getElementById('navbar');
+            if (scrollY > 5) {
+                navbar.classList.add('nav-scroll');
+            } else {
+                navbar.classList.remove('nav-scroll');
+            }
+        })
 
-                if (scrollY > 5) {
-                    navbar.classList.add('nav-scroll');
-                } else {
-                    navbar.classList.remove('nav-scroll');
-                }
-            })
+        // Script yang sangat sederhana dan pasti bekerja
+        const card = document.getElementById('flipCard');
+        let isFlipped = false;
 
-            // Script yang sangat sederhana dan pasti bekerja
-            const card = document.getElementById('flipCard');
-            let isFlipped = false;
+        card.addEventListener('click', function() {
+            isFlipped = !isFlipped;
+            this.style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
 
-            card.addEventListener('click', function() {
-                isFlipped = !isFlipped;
-                this.style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+            // Untuk debugging - pastikan ini muncul di console
+            console.log('Card diklik! Status flip:', isFlipped);
+        });
 
-                // Untuk debugging - pastikan ini muncul di console
-                console.log('Card diklik! Status flip:', isFlipped);
+        // Verifikasi event listener terpasang
+        console.log('Event listener berhasil dipasang');
+
+        // Responsive Navbar
+        const navigation = document.getElementById('navigation');
+        const hamburger = document.querySelector('#hamburger');
+
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('hamburger-active');
+            navigation.classList.toggle('nav-active');
+        });
+
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function() {
+                navigation.classList.remove('nav-active');
+                hamburger.classList.remove('hamburger-active');
             });
-
-            // Verifikasi event listener terpasang
-            console.log('Event listener berhasil dipasang');
-
-            // Responsive Navbar
-            const navigation = document.getElementById('navigation');
-            const hamburger = document.querySelector('#hamburger');
-
-
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('hamburger-active');
-                navigation.classList.toggle('nav-active');
-            });
-
-            navLinks.forEach(anchor => {
-                anchor.addEventListener('click', function() {
-                    navigation.classList.remove('nav-active');
-                    hamburger.classList.remove('hamburger-active');
-                });
-            });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
