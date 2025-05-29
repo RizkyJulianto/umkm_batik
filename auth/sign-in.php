@@ -22,8 +22,12 @@ if (!empty($_SESSION['login'])) {
 <body class="font-fira">
     <section class="sign-container w-full h-dvh">
         <main class="sign-row flex">
-            <div class="left-sign flex-1/2 bg-primary text-center px-10 w-full h-dvh flex justify-center items-center">
-                <h1 class="text-3xl font-bold text-white">Batik Indonesia Membentuk Pola Melestarikan Budaya</h1>
+            <div
+                class="left-sign flex-1/2 bg-primary text-center p-20 w-[50%] h-dvh flex justify-center items-center flex-col">
+                <img class="rounded-sm mb-5"
+                    src="https://asset.kompas.com/crops/d64HmpMdRPHMMwVVJfP-y5_RA8U=/518x0:5114x3064/750x500/data/photo/2022/01/01/61d00810dc56a.jpg"
+                    alt="">
+                <h1 class="text-xl font-bold text-white">Batik Indonesia Membentuk Pola Melestarikan Budaya</h1>
             </div>
             <div class="right-sign flex-1/2 p-10 flex justify-center items-center flex-col">
                 <div class="w-full">
@@ -39,7 +43,7 @@ if (!empty($_SESSION['login'])) {
                                 class="py-2.5 px-3 border-[2px] border-secondary rounded-sm focus:border-primary outline-none w-full"
                                 type="text" name="email" placeholder="Masukan email anda" autocomplete="off" id="email">
                         </div>
-                        <div class="f-group flex flex-col mb-5">
+                        <div id class="f-group flex flex-col mb-5">
                             <label for="password" class="l-group block mb-1">Password</label>
                             <div class="relative">
                                 <input
