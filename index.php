@@ -58,7 +58,7 @@
     <!-- Beranda Section -->
     <div class="beranda h-screen">
         <!-- Backround -->
-        <img src="assets/images/beranda-bg.png" alt="" class="absolute -z-10 top-0 w-screen h-screen">
+        <img src="assets/images/beranda-bg.png" alt="" class="absolute -z-10 top-0 w-screen h-screen object-cover">
         <div class="background-overlay bg-white/80 w-full h-screen absolute top-0 -z-9 "></div>
         <div class="beranda-section-box-text text-center lg:mt-40 mt-24 ">
             <div class="beranda-section-text-title ">
