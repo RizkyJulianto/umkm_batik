@@ -134,8 +134,9 @@
     </div>
     <!-- Tentang Section End -->
 
+
     <!-- Produk Section -->
-    <!-- <div class="produk mt-12 px-25 relative scroll-mt-28" id="produk">
+    <!-- <div class="produk mt-12 px-30 relative scroll-mt-28" id="produk">
         <div class="card flex justify-center mt-70 items-center gap-x-3 text-lg text-white bg-primary py-3 px-6 w-[240px] rounded-[30px] mx-auto">
             <span>Produk Kami</span>
         </div>
@@ -236,24 +237,24 @@
     <!-- Produk Section End -->
 
     <!-- Footer -->
-    <!-- <footer class="footer mt-96 px-8 w-full">
-        <div class="footer-container bg-white shadow-md border border-gray-100 rounded-[10px] p-8 w-full  flex justify-between">
-            <div class="foooter-col max-w-90 ">
+    <footer class="footer mt-96 lg:px-8">
+        <div class="footer-container bg-white shadow-md border border-gray-100 rounded-[10px] p-12 lg:p-8 w-full gap-y-10 flex flex-wrap justify-between">
+            <div class="foooter-col max-md:w-full md:max-w-72  ">
                 <div class="judul">
-                    <h3 class="font-bold text-3xl text-secondary">Batik <span class="text-primary">Indonesia</span></h3>
+                    <h3 class="max-md:text-center font-bold text-3xl text-secondary">Batik <span class="text-primary">Indonesia</span></h3>
                 </div>
-                <div class="deskripsi mt-2 text-secondary font-light">
+                <div class="deskripsi mt-2 text-secondary font-light max-md:text-center ">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, atque!</p>
                 </div>
                 <div class="sosial-media mt-12">
-                    <ul class="flex gap-x-3">
+                    <ul class="flex gap-x-3 max-md:justify-center ">
                         <li class="bg-primary rounded-full w-13  h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-x-twitter text-3xl text-white"></i></a></li>
                         <li class="bg-primary rounded-full w-13  h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-instagram text-3xl text-white"></i></a></li>
                         <li class="bg-primary rounded-full w-13 h-13 flex justify-center items-center p-2"><a href=""><i class="fa-brands fa-facebook text-3xl text-white"></i></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="foooter-col max-w-90 h-full flex flex-col pt-2 items-center">
+            <div class="foooter-col max-w-90 h-full flex flex-col pt-2 items-center max-md:order-3">
                 <div class="link-cepat border-t border-gray-200">
                     <ul class="flex gap-x-4 text-lg  text-secondary pt-2">
                         <li><a href="#beranda" class="hover:text-primary transition-all duration-500 ">Beranda</i></a></li>
@@ -270,30 +271,33 @@
                     <p>&copy; 2025 Batik Indonesia. All rights reserved.</p>
                 </div>
             </div>
-            <div class="foooter-col pt-2">
+            <div class="foooter-col  w-full lg:w-auto pt-5 lg:pt-2 max-md:order-2 max-lg:border-t border-gray-200">
                 <div class="judul">
                     <h3 class="text-secondary font-bold text-2xl">Galeri Kami</h3>
                 </div>
-                <div class="galeri flex gap-x-3 mt-3">
-                    <img src="assets/images/batik-2.jpg" alt="" class="w-[90px] h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
-                    <img src="assets/images/batik-2.jpg" alt="" class="w-[90px] h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
-                    <img src="assets/images/batik-2.jpg" alt="" class="w-[90px] h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
-                </div>
-                <div class="kerjasama">
-                    <form action="" class="mt-6 w-full">
-                        <div class="judul">
-                            <h4 class="font-bold text-secondary mb-2">Ingin Bekerja Sama?</h4>
-                        </div>
-                        <div class="form-group w-full flex gap-x-2">
-                            <input type="text" name="email" id="email" placeholder="Masukan Email Anda..." class="text-sm rounded-[5px] ring-0 border border-gray-200">
-                            <button type="submit" class="bg-primary text-white font-bold rounded-[5px] py-2 px-5 cursor-pointer hover:bg-amber-500 duration-500 transition-all">Kirim</button>
-                        </div>
-                    </form>
+                <div class="footer-col-content flex lg:flex-col max-md:flex-col  h-full justify-between ">
+                    <div class="galeri flex gap-x-3 mt-3">
+                        <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
+                        <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
+                        <img src="assets/images/batik-2.jpg" alt="" class="w-[100px] lg:w-[90px]  h-[90px] lg:h-[80px] object-cover  ring-2 ring-primary rounded-[10px]">
+                    </div>
+                    <div class="kerjasama">
+                        <form action="" class=" mb-7 w-full">
+                            <div class="judul">
+                                <h4 class="font-bold text-xl lg:text-base text-secondary mb-2">Ingin Bekerja Sama?</h4>
+                            </div>
+                            <div class="form-group w-full flex gap-x-2">
+                                <input type="text" name="email" id="email" placeholder="Masukan Email Anda..." class="text-sm rounded-[5px] ring-0 border border-gray-200  w-full lg:w-auto ">
+                                <button type="submit" class="bg-primary text-white font-bold rounded-[5px] py-2 px-5 cursor-pointer hover:bg-amber-500 duration-500 transition-all">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
 
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- Footer End -->
 
 
