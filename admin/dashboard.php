@@ -1,6 +1,6 @@
 <?php include "../template/admin/layout-up.php"; ?>
 
-<section class="dashboard w-full ml-[360px] pt-[85px] bg-[#f5f5f5] min-h-screen overflow-y-auto">
+<section class="dashboard w-full ml-[300px] pt-[85px] bg-[#f5f5f5] min-h-screen overflow-y-auto">
     <div class="header-admin w-full bg-white py-5 px-7">
         <div class="flex flex-col">
             <h3 class="text-xl"><i class="fas fa-th-large"></i> Dashboard </h3>
